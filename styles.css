@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #171718, #1f2124, #6a6e73, #9fa3a9, #ff8c00);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: #f0f4f8;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+    }
+    25%, 75% {
+        transform: scale(1.1) rotate(90deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(180deg);
+    }
+}
+
+@keyframes zoomOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(3);
+    }
+}
+
+.carga-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: #171718;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.logo {
+    width: 150px;
+    animation: heartbeat 1s infinite;
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+    margin: auto;
+    max-width: 500px;
+    background: rgba(31, 33, 36, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #f0f4f8;
+    margin-bottom: 20px;
+}
+
+button.btn {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #ff8c00;
+    color: #f0f4f8;
+    transition: background 0.3s;
+}
+
+button.btn:hover {
+    background: #6a6e73;
+}
+
+input[type="text"], input[type="number"], input[type="email"], input[type="password"] {
+    padding: 10px;
+    margin: 10px 0;
+    width: calc(100% - 22px);
+    box-sizing: border-box;
+    border: 1px solid #6a6e73;
+    border-radius: 5px;
+    background: #393d42;
+    color: #f0f4f8;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+}
+
+.altura-container, .peso-container {
+    position: relative;
+    display: inline-block;
+    width: calc(100% - 22px);
+}
+
+.altura-container input[type="number"], .peso-container input[type="number"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.unidad {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #f0f4f8;
+}
+
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ff8c00;
+}
+
+#ejercicios {
+    position: relative;
+}
